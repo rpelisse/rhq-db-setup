@@ -1,0 +1,6 @@
+#!/bin/sh
+JON_SETUP_LIB_DIR=${JON_SETUP_LIB_DIR:-'/usr/local/java/lib'}
+
+readonly MAIN_CLASSNAME='org.redhat.jboss.rqh.autodb.RHQDatabaseInstaller'
+
+java -cp ${JON_SETUP_LIB_DIR}/jon-setup-*.jar "${MAIN_CLASSNAME}" ${@}
